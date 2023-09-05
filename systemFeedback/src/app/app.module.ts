@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabellaComponent } from './tabella/tabella.component';
 import { UpdateTagComponent } from './update-tag/update-tag.component';
+import { TabellaTagComponent } from './tabella-tag/tabella-tag.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabellaComponent,
-    UpdateTagComponent
+    UpdateTagComponent,
+    TabellaTagComponent
   ],
   imports: [
     BrowserModule,
