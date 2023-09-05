@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabellaComponent } from './tabella/tabella.component';
+import { UpdateTagComponent } from './update-tag/update-tag.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabellaComponent
+    TabellaComponent,
+    UpdateTagComponent
   ],
   imports: [
     BrowserModule,
