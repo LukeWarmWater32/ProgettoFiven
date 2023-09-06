@@ -19,8 +19,8 @@ export class TagService {
   addTag(tag: Tag): Observable<string> {
     return this.http.post<string>(`${this.uri}/upsertTag`, tag); 
   }
-  getTags(page:number): Observable <Tag[]> {
-    return this.http.get<Tag[]>(`${this.uri}/getTag/${page}`)
+  getTags(id:number): Observable <Tag> {
+    return this.http.get<Tag>(`${this.uri}/getTag/${id}`)
   }
    updateTag(tag:Tag):Observable<string>{
     return this.http.post<string>(`${this.uri}/upsertTag`, tag)

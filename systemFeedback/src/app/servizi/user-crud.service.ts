@@ -20,8 +20,8 @@ export class UserCrudService {
   addUser(user: Users): Observable<string> {
     return this.http.post<string>(`${this.uri}/upsertUser`, user);
   }
-  getUsers(page:number): Observable <Users[]> {
-    return this.http.get<Users[]>(`${this.uri}/getUsers/${page}`)
+  getUsers(id:number): Observable <Users> {
+    return this.http.get<Users>(`${this.uri}/getUsers/${id}`)
   }
   deleteUser(id:number):Observable<string>{
     return this.http.get<string>(`${this.uri}/deleteUser/${id}`)

@@ -19,8 +19,8 @@ export class FeedbackService {
   addFeedback(feedback:Feedback): Observable <string>{
     return this.http.post<string>(`${this.uri}/upsertFeedback`, feedback)
   }
-  getFeedbacks(page:number):Observable <Feedback[]>{
-    return this.http.get<Feedback[]>(`${this.uri}/getFeedback/${page}`)
+  getFeedbacks(id:number):Observable <Feedback>{
+    return this.http.get<Feedback>(`${this.uri}/getFeedback/${id}`)
   }
   updateFeedback(feedback:Feedback):Observable <string>{
     return this.http.post<string>(`${this.uri}/upsertFeedback`, feedback)

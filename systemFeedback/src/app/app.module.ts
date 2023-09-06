@@ -7,6 +7,7 @@ import { TabellaComponent } from './tabella/tabella.component';
 import { UpdateTagComponent } from './update-tag/update-tag.component';
 import { TabellaTagComponent } from './tabella-tag/tabella-tag.component';
 import { FormTagComponent } from './form-tag/form-tag.component';
+import { ModificaTagComponent } from './modifica-component/modifica-tag/modifica-tag.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormTagComponent } from './form-tag/form-tag.component';
     TabellaComponent,
     UpdateTagComponent,
     TabellaTagComponent,
-    FormTagComponent
+    FormTagComponent,
+    ModificaTagComponent
   ],
   imports: [
     BrowserModule,
