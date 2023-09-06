@@ -1,17 +1,17 @@
 export class Tag{
     id: number;
-    tag_name: string;
+    tagName: string;
     description: string;
-    created_at: Date;
-    update_at: Date;
+    createdAt: Date;
+    updateAt: Date;
     enable: Boolean;
 
     constructor(){
         this.id = 0;
-        this.tag_name = '';
+        this.tagName = '';
         this.description = '';
-        this.created_at = new Date;
-        this.update_at = new Date;
+        this.createdAt = new Date;
+        this.updateAt = new Date;
         this.enable = new Boolean("")
     }
 }
