@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { FormTagComponent } from './form-tag/form-tag.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TabTagComponent } from './tab-tag/tab-tag.component';
+import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormTagComponent,
     TabTagComponent,
+    FormFeedbackComponent,
   ],
   imports: [
     BrowserModule,

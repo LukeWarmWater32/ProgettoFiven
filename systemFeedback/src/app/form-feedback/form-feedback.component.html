@@ -1,0 +1,38 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <h3 class="text-center">Invia Feedback</h3>
+    <div class="container-fluid" class="inputWidth">
+        <label for="feedbackType" class="form-label">Tipo di Feedback</label>
+        <br>
+        <label for="feedbackPositivo" class="form-label">Positivo</label>
+        <input type="radio" class="form-control" name="feedbackType" id="feedbackPositivo" value="Positivo" onclick="resetMessage()" [(ngModel)]="feedback.feedbacksType"/>
+        <label for="feedbacksMiglioramento" class="form-label">Miglioramento</label>
+        <input type="radio" class="form-control" name="feedbackType" id="feedbacksMiglioramento" value="Miglioramento" onclick="resetMessage()" [(ngModel)]="feedback.feedbacksType"/>
+      <label for="description" class="form-label">Descrizione</label>
+      <br>
+      <textarea id="description" name="description" rows="4" cols="50" [(ngModel)]="feedback.description">
+      </textarea>
+      <br>
+      <label for="sendDate" class="form-label">Data invio</label>
+      <input style="width:auto" type="date" class="form-control" name="sendDate" id="sendDate"
+      onclick="resetMessage()" [(ngModel)]="feedback.sendDate"/>
+      <br>
+    <div class="form-row">
+      <div class="col">
+          <label for="createdAt" class="form-label">Creato in data</label>
+          <input style="width:auto" type="date" class="form-control" name="createdAt" id="createdAt"
+          onclick="resetMessage()" [(ngModel)]="feedback.createdAt" />
+          </div>
+          <div class="col">
+            <label for="updateAt" class="form-label">Aggiornato in data</label>
+            <input style="width:auto" type="date" class="form-control" name="updateAt" id="updateAt"
+            onclick="resetMessage()" [(ngModel)]="feedback.updatedAt" />
+          </div>
+        </div>
+        <label for="enableTrue">Enable</label >
+          <input style="margin-left: 2%;" type="radio" id="enableTrue" name="enable" value="true" [(ngModel)]="feedback.enable">
+          <label style="margin-left: 4%;" for="enableFalse">Disable</label>
+          <input  style="margin-left: 2%;" type="radio" id="enableFalse" name="enable" value="false" [(ngModel)]="feedback.enable">
+        <br>
+        <button type="submit" class="btn btn-dark">Salva</button>
+        </div>
+  </form>

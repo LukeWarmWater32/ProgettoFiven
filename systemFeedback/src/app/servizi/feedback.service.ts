@@ -23,7 +23,7 @@ export class FeedbackService {
   }
 
   getFeedbacks(page:number): Observable <Feedback[]>{
-    return  this.http.get<Feedback[]>(${this.uri}/getFeedbacks/${page})
+    return  this.http.get<Feedback[]>(`${this.uri}/getFeedbacks/${page}`)
   }
 
   deleteFeedback(id:number):Observable<string>{
