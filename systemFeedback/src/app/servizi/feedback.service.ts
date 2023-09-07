@@ -16,19 +16,27 @@ export class FeedbackService {
   };
 
   constructor(private http:HttpClient) { }
+
   addFeedback(feedback:Feedback): Observable <string>{
+    alert("Add Feed ok!")
     return this.http.post<string>(`${this.uri}/upsertFeedback`, feedback)
   }
-  getFeedbacks(id:number):Observable <Feedback>{
-    return this.http.get<Feedback>(`${this.uri}/getFeedback/${id}`)
+
+  getFeedbacks(page:number): Observable <Feedback[]>{
+    return  this.http.get<Feedback[]>(`${this.uri}/getFeedbacks/${page}`)
   }
-  updateFeedback(feedback:Feedback):Observable <string>{
-    return this.http.post<string>(`${this.uri}/upsertFeedback`, feedback)
-  }
+
   deleteFeedback(id:number):Observable<string>{
     return this.http.get<string>(`${this.uri}/deleteFeedback/${id}`)
   }
+
   getFeedbacksdim():Observable<number>{
     return this.http.get<number>(`${this.uri}/getFeedbacksDim`)
   }
+
+  getFeedback(id:number):Observable <Feedback>{
+    return this.http.get<Feedback>(`${this.uri}/getFeedback/${id}`)
+  }
+
 }
+

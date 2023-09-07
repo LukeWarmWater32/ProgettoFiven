@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { UpdateTagComponent } from './update-tag/update-tag.component';
 
 import { FormTagComponent } from './form-tag/form-tag.component';
-import { ModificaTagComponent } from './modifica-component/modifica-tag/modifica-tag.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TabTagComponent } from './tab-tag/tab-tag.component';
+import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     UpdateTagComponent,
     
     FormTagComponent,
-    ModificaTagComponent,
+    TabTagComponent,
+    FormFeedbackComponent,
+ 
    
   ],
   imports: [

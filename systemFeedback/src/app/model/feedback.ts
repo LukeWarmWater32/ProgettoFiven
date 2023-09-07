@@ -1,20 +1,21 @@
 export class Feedback{
-    id: number;
-    feedbacks_type: string;
-    send_date: Date;
-    created_at: Date;
-    updated_at: Date;
-    enable: Boolean;
-    description: string;
-    
-    constructor(){
-        this.id = 0;
-        this.feedbacks_type = '';
-        this.send_date = new Date;
-        this.created_at = new Date;
-        this.updated_at = new Date;
-        this.enable = new Boolean("");
-        this.description = '';
-    }
+  id: number;
+  feedbacksType: string;
+  sendDate: Date;
+  createdAt: Date;
+  updatedAt: Date;
+  enable: Boolean;
+  description: string;
+
+  constructor(){
+      this.id = 0;
+      this.feedbacksType = '';
+      this.sendDate = new Date;
+      this.createdAt = new Date;
+      this.updatedAt = new Date;
+      this.enable = new Boolean("");
+      this.description = '';
+  }
+
 
 }

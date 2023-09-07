@@ -1,24 +1,34 @@
 <form #form="ngForm" (ngSubmit)="onSubmit()">
-    <h3 class="text-center">Registrazione Tag</h3>
-<div>
-    <br>
-    <label for="tagName" class="form-label">Nome Tag</label>
-    <input type="text" class="form-control" name="tagName" id="tagName" placeholder="Nome tag"
-      onclick="resetMessage()" [(ngModel)]="tag.tagName" />
-    <br>
+  <h3 class="text-center">Registrazione Tag</h3>
+  <div class="container-fluid" class="inputWidth">
+  <div class="row">
+    <div class="col" >
+      <label for="tagName" class="form-label">Nome Tag</label>
+      <input type="text" class="form-control" name="tagName" id="tagName" onclick="resetMessage()" [(ngModel)]="tag.tagName" />
+    </div>
+  </div>
     <label for="description" class="form-label">Descrizione Tag</label>
     <br>
-    <textarea id="description" name="description" rows="4" cols="50">
+    <textarea id="description" name="description" rows="4" cols="50" [(ngModel)]="tag.description">
     </textarea>
     <br>
-    <label for="createdAt" class="form-label">Creato in data</label>
-    <input type="date" class="form-control" name="createdAt" id="createdAt"
-      onclick="resetMessage()" [(ngModel)]="tag.createdAt" />
+      <div class="form-row">
+        <div class="col">
+          <label for="createdAt" class="form-label">Creato in data</label>
+          <input type="date" class="form-control" name="createdAt" id="createdAt"
+          onclick="resetMessage()" [(ngModel)]="tag.createdAt" />
+        </div>
+        <div class="col">
+          <label for="createdAt" class="form-label">Aggiornato in data</label>
+          <input type="date" class="form-control" name="updateAt" id="updateAt"
+          onclick="resetMessage()" [(ngModel)]="tag.updateAt" />
+        </div>
+      </div>
+      <label for="enableTrue">Enable</label >
+        <input style="margin-left: 2%;" type="radio" id="enableTrue" name="enable" value="true" [(ngModel)]="tag.enable">
+        <label style="margin-left: 4%;" for="enableFalse">Disable</label>
+        <input  style="margin-left: 2%;" type="radio" id="enableFalse" name="enable" value="false" [(ngModel)]="tag.enable">
       <br>
-    <label for="updateAt" class="form-label">Modificato in data</label>
-    <input type="date" class="form-control" name="updateAt" id="updateAt"
-      onclick="resetMessage()" [(ngModel)]="tag.updateAt" />
-    <br>
-    <button type="submit" class="btn btn-dark">Salva</button>
-  </div>
+      <button type="submit" class="btn btn-dark">Salva</button>
+      </div>
 </form>

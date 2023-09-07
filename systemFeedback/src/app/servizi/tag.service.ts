@@ -7,7 +7,7 @@ import { Tag } from '../model/tag';
   providedIn: 'root'
 })
 export class TagService {
-  uri: string = 'http://localhost:8080'
+  uri: string = 'http://localhost:8094'
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -16,19 +16,27 @@ export class TagService {
   };
 
   constructor(private http:HttpClient) { }
+  
   addTag(tag: Tag): Observable<string> {
+    alert("Add Tag ok!")
     return this.http.post<string>(`${this.uri}/upsertTag`, tag); 
   }
-  getTags(id:number): Observable <Tag> {
-    return this.http.get<Tag>(`${this.uri}/getTag/${id}`)
+  
+  getTags(page:number): Observable <Tag[]> {
+    return this.http.get<Tag[]>(`${this.uri}/getTags/${page}`)
   }
-   updateTag(tag:Tag):Observable<string>{
-    return this.http.post<string>(`${this.uri}/upsertTag`, tag)
-  }
+ 
   deleteTag(id:number):Observable<string>{
     return this.http.get<string>(`${this.uri}/deleteTag/${id}`)
   }
   getTagsDim():Observable<number>{
-    return this.http.get<number>(`${this.uri}/getTagsDim`)
+    return this.http.get<number>(`${this.uri}/getSize`)
   }
+
+  getTag(id:number): Observable <Tag> {
+    return this.http.get<Tag>(`${this.uri}/getTag/${id}`)
+  }
+
+
+  
 }
