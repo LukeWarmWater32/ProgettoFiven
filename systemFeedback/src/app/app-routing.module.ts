@@ -4,8 +4,9 @@ import { FormTagComponent } from './form-tag/form-tag.component';
 import { TabTagComponent } from './tab-tag/tab-tag.component';
 
 const routes: Routes = [
-  { path: "formTag", component: FormTagComponent },
+  { path: "formTag/:id", component: FormTagComponent },
   { path: "tabellaTag", component: TabTagComponent }
+
 ];
 
 @NgModule({

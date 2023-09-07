@@ -44,7 +44,7 @@ export class FormTagComponent implements OnInit{
   }
 
   onSubmit(): void {
-    if(this.tags==null){
+    if(this.tags.length==null){
       this.crud.addTag(this.tag).subscribe((message:string)=>{
         this.message=message;
         this.router.navigate(["tabellaTag"]);

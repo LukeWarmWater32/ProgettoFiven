@@ -1,5 +1,5 @@
 <div *ngIf="tags.length == 0" class="container p-3 bg-body-secondary rounded main centro mt-5 mb-5 rounded-5">
-<button routerLink="/formTag" class="btn btn-dark">Inserisci Tag</button>
+<button routerLink="/formTag/:id" class="btn btn-dark">Inserisci Tag</button>
 <h3>Nessun tag inserito</h3>
 </div>
 
@@ -26,7 +26,7 @@
               <td class="text-warning">{{tag.createdAt}}</td>
               <td class="text-warning">{{tag.updateAt}}</td>
               <td class="text-warning">{{tag.enable}}</td>
-              <td><button routerLink='/modifyTag/{{tag.id}}' class="btn btn-outline-warning">Modifica</button></td>
+              <td><button routerLink='/formTag/{{tag.id}}' class="btn btn-outline-warning">Modifica</button></td>
             </tr>
           </tbody>
         </table>
