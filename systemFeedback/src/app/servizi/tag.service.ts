@@ -16,6 +16,7 @@ export class TagService {
   };
 
   constructor(private http:HttpClient) { }
+  
   addTag(tag: Tag): Observable<string> {
     return this.http.post<string>(`${this.uri}/upsertTag`, tag); 
   }
@@ -29,6 +30,10 @@ export class TagService {
     return this.http.get<string>(`${this.uri}/deleteTag/${id}`)
   }
   getTagsDim():Observable<number>{
-    return this.http.get<number>(`${this.uri}/getTagsDim`)
+    return this.http.get<number>(`${this.uri}/getSize`)
+  }
+
+  getTag(page:number): Observable <Tag[]> {
+    return this.http.get<Tag[]>(`${this.uri}/getTag/${page}`)
   }
 }

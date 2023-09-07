@@ -1,1 +1,31 @@
-<p>modifica-tag works!</p>
+<form>
+    <h3 class="text-center">Modifica Tag</h3>
+    <div class="container-fluid" class="inputWidth">
+    <div class="row">
+      <div class="col" >
+        <label for="tagName" class="form-label">Nome Tag</label>
+        <input type="text" class="form-control" name="tagName" id="tagName" onclick="resetMessage()" [(ngModel)]="tag.tagName" />
+      </div>
+    </div>
+      <label for="description" class="form-label">Descrizione Tag</label>
+      <br>
+      <textarea id="description" name="description" rows="4" cols="50">
+      </textarea>
+      <br>
+        <div class="form-row">
+          <div class="col">
+            <label for="createdAt" class="form-label">Creato in data</label>
+            <input type="date" class="form-control" name="createdAt" id="createdAt"
+            onclick="resetMessage()" [(ngModel)]="tag.createdAt" />
+          </div>
+          <div class="col">
+            <label for="createdAt" class="form-label">Aggiornato in data</label>
+            <input type="date" class="form-control" name="updateAt" id="updateAt"
+            onclick="resetMessage()" [(ngModel)]="tag.updateAt" />
+          </div>
+        </div>
+        <input type="hidden" id="enable" name="enable" value="true">
+        <br>
+        <button type="submit" class="btn btn-dark">Salva</button>
+        </div>
+  </form>
