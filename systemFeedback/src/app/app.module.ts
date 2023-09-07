@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { UpdateTagComponent } from './update-tag/update-tag.component';
 
 import { FormTagComponent } from './form-tag/form-tag.component';
-import { ModificaTagComponent } from './modifica-component/modifica-tag/modifica-tag.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TabTagComponent } from './tab-tag/tab-tag.component';
 
@@ -18,7 +17,6 @@ import { TabTagComponent } from './tab-tag/tab-tag.component';
     UpdateTagComponent,
     
     FormTagComponent,
-    ModificaTagComponent,
     TabTagComponent,
  
    

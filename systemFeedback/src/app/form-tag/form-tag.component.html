@@ -1,4 +1,4 @@
-<form>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
   <h3 class="text-center">Registrazione Tag</h3>
   <div class="container-fluid" class="inputWidth">
   <div class="row">
@@ -9,7 +9,7 @@
   </div>
     <label for="description" class="form-label">Descrizione Tag</label>
     <br>
-    <textarea id="description" name="description" rows="4" cols="50">
+    <textarea id="description" name="description" rows="4" cols="50" [(ngModel)]="tag.description">
     </textarea>
     <br>
       <div class="form-row">
@@ -24,7 +24,10 @@
           onclick="resetMessage()" [(ngModel)]="tag.updateAt" />
         </div>
       </div>
-      <input type="hidden" id="enable" name="enable" value="true">
+      <label for="enableTrue">Enable</label >
+        <input style="margin-left: 2%;" type="radio" id="enableTrue" name="enable" value="true" [(ngModel)]="tag.enable">
+        <label style="margin-left: 4%;" for="enableFalse">Disable</label>
+        <input  style="margin-left: 2%;" type="radio" id="enableFalse" name="enable" value="false" [(ngModel)]="tag.enable">
       <br>
       <button type="submit" class="btn btn-dark">Salva</button>
       </div>

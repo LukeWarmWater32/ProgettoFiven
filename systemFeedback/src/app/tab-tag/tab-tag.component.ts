@@ -23,6 +23,12 @@ export class TabTagComponent implements OnInit{
     this.getTagImp(this.page);
   }
 
+  getTag(): void {
+    this.crud.getTags(this.page).subscribe((tag: Tag[]) => {
+      this.tags = tag;
+    });
+  }
+
   getTagImp(page:number): void{
     this.crud.getTagsDim().subscribe((dim:number)=>{
       this.nPagine = Math.round(dim/5);
@@ -36,7 +42,7 @@ export class TabTagComponent implements OnInit{
     else{
       this.page = page;
     }
-    this.crud.getTag(this.page).subscribe((tags:Tag[])=>{
+    this.crud.getTags(this.page).subscribe((tags:Tag[])=>{
       this.tags = tags;
       this.message = "";
     })
