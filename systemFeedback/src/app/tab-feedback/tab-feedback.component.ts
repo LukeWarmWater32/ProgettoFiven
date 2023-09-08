@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Feedback } from '../model/feedback';
 import { FeedbackService } from '../servizi/feedback.service';
 
@@ -7,7 +7,7 @@ import { FeedbackService } from '../servizi/feedback.service';
   templateUrl: './tab-feedback.component.html',
   styleUrls: ['./tab-feedback.component.css']
 })
-export class TabFeedbackComponent {
+export class TabFeedbackComponent implements OnInit{
   feedbacks: Feedback[] = [];
   message!: string;
   token!:string;

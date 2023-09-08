@@ -1,18 +1,18 @@
 export class Feedback{
     id: number;
-    feedbacksType: string;
+    feedbackType: string;
     sendDate: Date;
     createdAt: Date;
-    updatedAt: Date;
+    updateAt: Date;
     enable: Boolean;
     description: string;
     
     constructor(){
         this.id = 0;
-        this.feedbacksType = '';
+        this.feedbackType = '';
         this.sendDate = new Date;
         this.createdAt = new Date;
-        this.updatedAt = new Date;
+        this.updateAt = new Date;
         this.enable = new Boolean("");
         this.description = '';
     }

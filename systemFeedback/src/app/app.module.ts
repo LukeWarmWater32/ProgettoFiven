@@ -10,6 +10,7 @@ import { FormTagComponent } from './form-tag/form-tag.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TabTagComponent } from './tab-tag/tab-tag.component';
 import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
+import { TabFeedbackComponent } from './tab-feedback/tab-feedback.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
     FormTagComponent,
     TabTagComponent,
     FormFeedbackComponent,
+    TabFeedbackComponent
   ],
   imports: [
     BrowserModule,

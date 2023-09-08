@@ -1,6 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="">Home </a>
+      <a class="nav-item nav-link active" href="formTag/:id">Form Tag <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="tabellaTag">Tabella Tag</a>
+      <a class="nav-item nav-link" href="formFeed/:id">Form Feedback</a>
+      <a class="nav-item nav-link" href="tabellaFeed">Tabella Feedback</a>
+    </div>
+  </div>
+</nav>
 <form #form="ngForm" (ngSubmit)="onSubmit()">
-  <h3 class="text-center">Registrazione Tag</h3>
   <div class="container-fluid" class="inputWidth">
+    <h3>Registrazione Tag</h3>
+    <br>
   <div class="row">
     <div class="col" >
       <label for="tagName" class="form-label">Nome Tag</label>
@@ -24,6 +40,7 @@
           onclick="resetMessage()" [(ngModel)]="tag.updateAt" />
         </div>
       </div>
+      <br>
       <label for="enableTrue">Enable</label >
         <input style="margin-left: 2%;" type="radio" id="enableTrue" name="enable" value="true" [(ngModel)]="tag.enable">
         <label style="margin-left: 4%;" for="enableFalse">Disable</label>

@@ -44,17 +44,17 @@ export class FormFeedbackComponent {
   }
 
   onSubmit(): void {
-    if(this.feeds==null){
+    if(this.feeds.length==null){
       this.crud.addFeedback(this.feedback).subscribe((message:string)=>{
         this.message=message;
-        this.router.navigate(["formFeedback"]);
+        this.router.navigate(["tabellaFeed"]);
       });
       this.feedback = new Feedback();
     }
     else{
       this.crud.addFeedback(this.feedback).subscribe((message:string)=>{
         this.message=message;
-        this.router.navigate(["formFeedback"]);
+        this.router.navigate(["tabellaFeed"]);
       })
       this.feedback = new Feedback();
     }
