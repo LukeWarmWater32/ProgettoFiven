@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Feedback } from '../model/feedback';
 import { FeedbackService } from '../servizi/feedback.service';
 

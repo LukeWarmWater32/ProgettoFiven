@@ -14,13 +14,13 @@
   </div>
 </nav>
 <div *ngIf="feedbacks.length == 0" class="container p-3 bg-body-secondary rounded main centro mt-5 mb-5 rounded-5">
-    <button routerLink="/formFeed" class="btn btn-dark">Inserisci Feedback</button>
-    <h3>Nessun Feedback inserito</h3>
+    <button routerLink="/formFeed" class="btn btn-dark">Inserisci Tag</button>
+    <h3>Nessun tag inserito</h3>
     </div>
     
     <div class="container p-3 bg-body-secondary rounded main centro mt-5 mb-5 rounded-5" *ngIf="feedbacks.length > 0">
         <section class="container pb-5">
-          <h3 class="text-center my-4">Tabella Feedback</h3>
+          <h3 class="text-center my-4">Tabella tag</h3>
           <div class="d-flex justify-content-center my-3">
             <table border="1" class="table table-striped">
               <thead class="bg-warning">
@@ -44,8 +44,7 @@
                   <td class="text-warning">{{feedback.enable}}</td>
                   <td class="text-warning">{{feedback.description}}</td>
                   <td><button routerLink='/formFeed/{{feedback.id}}' class="btn btn-outline-warning">Modifica</button></td>
-            </tr>
-               
+                </tr>
               </tbody>
             </table>
           </div>
